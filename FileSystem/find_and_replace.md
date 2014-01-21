@@ -2,7 +2,7 @@ Find And Replace
 ====
 
 ### Unix Commands
-    find . -type f -exec -e 's/FIND_STRING/REPLACE_STRING/g' '{}' +
+    find . -type f -exec sed -e 's/Test_Dbv3/TestDbv3/g'  '{}' +
 
 The aptly named find command finds files. Here, we're finding files in the current working directory (.) that are files (-type f). Using these files, we're going to -exec a command: sed. + indicates the end of the command and that we'd like to replace {} with as many files as the operating system will allow.
 
